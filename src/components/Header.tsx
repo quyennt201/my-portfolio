@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { MenuIcon, XIcon } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
@@ -28,7 +29,9 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
               key={section.id}
               onClick={() => setActiveSection(section.id)}
               href={`#${section.id}`}
-              className="text-md font-medium text-white hover:text-purple-400 transition-colors"
+              className={clsx("text-md font-medium text-white hover:text-purple-400 transition-colors",
+                activeSection === section.id && "text-purple-400"
+              )}
             >
               {section.label}
             </a>
@@ -55,7 +58,9 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
                 <button
                   key={section.id}
                   onClick={() => setActiveSection(section.id)}
-                  className="text-left text-lg cursor-pointer font-medium text-white hover:text-purple-400 transition-colors"
+                  className={clsx("text-left text-lg cursor-pointer font-medium text-white hover:text-purple-400 transition-colors",
+                    activeSection === section.id && "text-purple-400"
+                  )}
                 >
                   {section.label}
                 </button>
