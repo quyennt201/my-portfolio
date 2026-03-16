@@ -7,17 +7,13 @@ const CONTENTS =
     name: 'Quyen Nguyen',
     subtitle: 'frontend developer',
     description: 'Crafting modern, responsive, and user-friendly websites with passion and precision.',
-    resume: 'https://www.google.com',
+    resume: '/Nguyen-Thi-Quyen_Frontend-Developer.pdf',
     github: 'https://github.com/quyennguyen123',
     linkedin: 'https://www.linkedin.com/in/quyennguyen123',
     email: 'quyennguyen123@gmail.com',
 }
 
 export default function HeroSection() {
-    const handleDownloadResume = () => {
-        window.open(CONTENTS.resume, '_blank');
-    }
-
     const handleGithub = () => {
         window.open(CONTENTS.github, '_blank');
     }
@@ -47,9 +43,9 @@ export default function HeroSection() {
                         {CONTENTS.description}
                     </p>
                     <div className="flex items-center gap-6 flex-wrap">
-                        <button onClick={handleDownloadResume} className="bg-gradient-primary hover:scale-105 transition-all duration-300 px-10 text-lg py-4 rounded-full text-white font-medium flex items-center gap-2 cursor-pointer">
+                        <a href={CONTENTS.resume} download className="bg-gradient-primary hover:scale-105 transition-all duration-300 px-10 text-lg py-4 rounded-full text-white font-medium flex items-center gap-2 cursor-pointer">
                             Download Resume <DownloadIcon className="size-6" />
-                        </button>
+                        </a>
                         <div className='flex items-center gap-6'>
                             <div onClick={handleGithub} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <GithubIcon className="size-6" />
