@@ -18,6 +18,36 @@ type Project = {
 
 const PROJECT: Array<Project> = [
     {
+        title: "ConnectRoomFree – Room Rental Listing Platform",
+        description: (
+            <div>
+                ConnectRoomFree is a web platform that helps users search, browse, and manage room rental listings easily.
+                The application allows users to explore available rooms, filter by different criteria such as location and price, and view detailed information about each listing.
+
+                Users can also interact with the system by liking rooms, managing their personal listings, and viewing rooms they have saved. The platform is designed with a modern UI and optimized data fetching to provide a fast and smooth user experience.
+                <ul className="list-disc list-inside">
+                    <p className="text-gray-400 font-bold">
+                        Key features include:
+                    </p>
+                    <li>Browse and search room listings</li>
+                    <li>Filter rooms by district, price, and keywords</li>
+                    <li>Like and save favorite rooms</li>
+                    <li>View detailed information about each room</li>
+                    <li>Responsive interface with smooth animations</li>
+                </ul>
+            </div>
+        ),
+        tech: ["ReactJS", "TailwindCSS", "TypeScript", "TanStack React Query", "NestJS", "PostgreSQL", "Docker"],
+        image: "/connect-room.jpg",
+        link: "https://connect-room-free.homes",
+        github: "https://www.github.com",
+        demo: "https://www.demo.com",
+        date: "2026",
+        category: "Web",
+        tags: ["Web", "React", "Tailwind", "TypeScript"],
+        isFeatured: true,
+    },
+    {
         title: "TonKombat – Telegram Mini Game (Active project)",
         description: (
             <ul className="list-disc list-inside">
@@ -35,11 +65,11 @@ const PROJECT: Array<Project> = [
             </ul>
         ),
         tech: ["ReactJS", "TailwindCSS", "Radix UI", "TypeScript", "TanStack React Query", "Zustand", "Telegram Mini App", "useSprings"],
-        image: "https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg",
-        link: "https://www.google.com",
+        image: "/tkb.jpg",
+        link: "https://t.me/Ton_kombat_bot/app",
         github: "https://www.github.com",
         demo: "https://www.demo.com",
-        date: "2021-01-01",
+        date: "2025",
         category: "Web",
         tags: ["Web", "React", "Tailwind", "TypeScript"],
         isFeatured: true,
@@ -51,6 +81,12 @@ const PROJECT: Array<Project> = [
                 Project Overview: Developed a web-based management system for an English center, consisting of two separate admin
                 platforms:
                 <div>
+                    <ul className="list-disc list-inside">
+                        <p className="text-gray-400 font-bold">
+                            Oauth
+                        </p>
+                        <li>Login with Google</li>
+                    </ul>
                     <ul className="list-disc list-inside">
                         <p className="text-gray-400 font-bold">
                             Company Admin System
@@ -74,10 +110,31 @@ const PROJECT: Array<Project> = [
         ),
         tech: ["NextJS", "Tailwind", "TypeScript", "React Hook Form", "Zod", "React Query"],
         image: "https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg",
-        link: "https://www.google.com",
+        link: "https://toeic.brit.edu.vn/",
         github: "https://www.github.com",
         demo: "https://www.demo.com",
-        date: "2021-01-01",
+        date: "2025",
+        category: "Web",
+        tags: ["Web", "React", "Tailwind", "TypeScript"],
+        isFeatured: true,
+    },
+    {
+        title: "Tonsend – Web3 Platform (tonsend.io)",
+        description: (
+            <ul className="list-disc list-inside">
+                <li>Developed a Web3 frontend integrating TON blockchain functionalities.</li>
+                <li>Implemented form handling and validation using React Hook Form and Zod.</li>
+                <li>Supported token creation, transfers, airdrop distribution (Merkle tree), and vesting schedule features.</li>
+                <li>Ensured responsive UI, seamless blockchain interaction, and maintainable frontend architecture.</li>
+                <li>Contributed to UI/UX design decisions due to the absence of a dedicated design team.</li>
+            </ul>
+        ),
+        tech: ["ReactJS", "TailwindCSS", "TypeScript", "React Hook Form", "Zod", "TON Blockchain"],
+        image: "/tonsend.jpg",
+        link: "https://tonsend.io",
+        github: "https://www.github.com",
+        demo: "https://www.demo.com",
+        date: "2025",
         category: "Web",
         tags: ["Web", "React", "Tailwind", "TypeScript"],
         isFeatured: true,
@@ -94,34 +151,13 @@ const PROJECT: Array<Project> = [
             </ul>
         ),
         tech: ["ReactJS", "TailwindCSS", "TypeScript", "TanStack React Query", "Zustand", "Telegram Mini App", "useSprings"],
-        image: "https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg",
-        link: "https://www.google.com",
+        image: "/konsen.jpg",
+        link: "https://t.me/Sentient_AI_bot/hello",
         github: "https://www.github.com",
         demo: "https://www.demo.com",
-        date: "2021-01-01",
+        date: "2024",
         category: "Web",
         tags: ["Web", "ReactJS", "TailwindCSS", "TypeScript", "TanStack React Query", "Zustand", "Telegram Mini App", "useSprings"],
-        isFeatured: true,
-    },
-    {
-        title: "Tonsend – Web3 Platform (tonsend.io)",
-        description: (
-            <ul className="list-disc list-inside">
-                <li>Developed a Web3 frontend integrating TON blockchain functionalities.</li>
-                <li>Implemented form handling and validation using React Hook Form and Zod.</li>
-                <li>Supported token creation, transfers, airdrop distribution (Merkle tree), and vesting schedule features.</li>
-                <li>Ensured responsive UI, seamless blockchain interaction, and maintainable frontend architecture.</li>
-                <li>Contributed to UI/UX design decisions due to the absence of a dedicated design team.</li>
-            </ul>
-        ),
-        tech: ["ReactJS", "TailwindCSS", "TypeScript", "React Hook Form", "Zod", "TON Blockchain"],
-        image: "https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg",
-        link: "https://www.google.com",
-        github: "https://www.github.com",
-        demo: "https://www.demo.com",
-        date: "2021-01-01",
-        category: "Web",
-        tags: ["Web", "React", "Tailwind", "TypeScript"],
         isFeatured: true,
     },
 ]
@@ -154,7 +190,12 @@ function FeaturedProjectCard({ project, index }: { project: Project, index: numb
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="bg-white/5 backdrop-blur-xl rounded-4xl shadow-md p-4 border border-white/10 hover:translate-y-[-10px] transition-all duration-300"
         >
-            <img src={project.image} alt={project.title} className="w-full aspect-16/10 object-cover rounded-3xl" />
+
+            <div className="w-full aspect-16/10 object-cover rounded-3xl relative">
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-3xl" />
+                <div className="text-gray-400 text-sm absolute bottom-0 right-0 p-4 font-bold">{project.date}</div>
+            </div>
+
             <div className="p-4 space-y-4">
                 <div className="space-y-2">
                     <h3 className="text-2xl font-bold">{project.title}</h3>
@@ -166,8 +207,8 @@ function FeaturedProjectCard({ project, index }: { project: Project, index: numb
                     ))}
                 </div>
                 <div className="flex items-center justify-between gap-4 mt-4">
-                    <button className="bg-gradient-primary px-4 py-2 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
-                        View Detail <ArrowRightIcon className="size-4" />
+                    <button onClick={() => window.open(project.link, '_blank')} className="bg-gradient-primary px-4 py-2 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
+                        View Project <ArrowRightIcon className="size-4" />
                     </button>
                     <div className="flex items-center gap-2">
                         <button className="bg-white/5 px-4 py-2 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">

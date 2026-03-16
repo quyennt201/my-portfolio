@@ -6,7 +6,13 @@ const CONTENTS =
 {
     name: 'Quyen Nguyen',
     subtitle: 'frontend developer',
-    description: 'Crafting modern, responsive, and user-friendly websites with passion and precision.',
+    description: (
+        <p>
+            Frontend Developer with 2+ years of experience building scalable web applications using React, Next.js, and TypeScript.
+            Experienced in developing responsive UI, optimizing performance, and integrating REST APIs and Web3 features. Passionate
+            about building clean, maintainable frontend architectures and delivering high-quality user experiences.
+        </p>
+    ),
     resume: '/Nguyen-Thi-Quyen_Frontend-Developer.pdf',
     github: 'https://github.com/quyennt2001',
     email: 'mailto:quyennt2001@gmail.com?subject=Contact from Portfolio',
@@ -62,9 +68,9 @@ export default function HeroSection() {
                         <div className='absolute rounded-full inset-0 bg-linear-to-tr from-purple-600/40 to-pink-600/40 blur-2xl animate-pulse' />
                         <div className='relative z-10 size-full rounded-full overflow-hidden border-[6px] border-white/5 bg-background p-2'>
                             <img
-                                src="https://picsum.photos/seed/meriem/1000/1000"
+                                src="/avt.jpg"
                                 alt="Avatar"
-                                className="w-full h-full object-cover rounded-full"
+                                className="w-full h-full object-contain rounded-full"
                             />
                         </div>
                         <motion.div
