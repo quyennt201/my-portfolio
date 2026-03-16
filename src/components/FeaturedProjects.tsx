@@ -77,7 +77,7 @@ export default function FeaturedProjects() {
                 <h2 className="text-4xl font-bold text-center m-5">Featured Projects</h2>
                 <p className="text-center text-gray-400 text-xl">Check out some of my recent work</p>
 
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
                     {PROJECT.map((project, index) => (
                         <FeaturedProjectCard key={project.title} project={project} index={index} />
                     ))}

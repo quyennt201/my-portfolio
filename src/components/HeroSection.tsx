@@ -2,7 +2,34 @@ import { DownloadIcon, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import ReactIcon from './icons/ReactIcon';
 
+const CONTENTS =
+{
+    name: 'Quyen Nguyen',
+    subtitle: 'frontend developer',
+    description: 'Crafting modern, responsive, and user-friendly websites with passion and precision.',
+    resume: 'https://www.google.com',
+    github: 'https://github.com/quyennguyen123',
+    linkedin: 'https://www.linkedin.com/in/quyennguyen123',
+    email: 'quyennguyen123@gmail.com',
+}
+
 export default function HeroSection() {
+    const handleDownloadResume = () => {
+        window.open(CONTENTS.resume, '_blank');
+    }
+
+    const handleGithub = () => {
+        window.open(CONTENTS.github, '_blank');
+    }
+
+    const handleLinkedin = () => {
+        window.open(CONTENTS.linkedin, '_blank');
+    }
+
+    const handleEmail = () => {
+        window.open(CONTENTS.email, '_blank');
+    }
+
     return (
         <section id="home" className="pt-48 pb-32 px-6">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 md:gap-10 items-center">
@@ -12,25 +39,25 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                     className="space-y-8"
                 >
-                    <h1 className="text-5xl font-bold">Hi, I'm John Doe</h1>
+                    <h1 className="text-5xl font-bold">Hi, I'm {CONTENTS.name}</h1>
                     <p className="capitalize text-gradient text-3xl font-medium leading-tight">
-                        frontend developer
+                        {CONTENTS.subtitle}
                     </p>
                     <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
-                        Crafting modern, responsive, and user-friendly websites with passion and precision.
+                        {CONTENTS.description}
                     </p>
                     <div className="flex items-center gap-6 flex-wrap">
-                        <button className="bg-gradient-primary hover:scale-105 transition-all duration-300 px-10 text-lg py-4 rounded-full text-white font-medium flex items-center gap-2 cursor-pointer">
-                            Down Resume <DownloadIcon className="size-6" />
+                        <button onClick={handleDownloadResume} className="bg-gradient-primary hover:scale-105 transition-all duration-300 px-10 text-lg py-4 rounded-full text-white font-medium flex items-center gap-2 cursor-pointer">
+                            Download Resume <DownloadIcon className="size-6" />
                         </button>
                         <div className='flex items-center gap-6'>
-                            <div className="rounded-full p-3 bg-white/5 flex items-center justify-center">
+                            <div onClick={handleGithub} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <GithubIcon className="size-6" />
                             </div>
-                            <div className="rounded-full p-3 bg-white/5 flex items-center justify-center">
+                            <div onClick={handleLinkedin} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <LinkedinIcon className="size-6" />
                             </div>
-                            <div className="rounded-full p-3 bg-white/5 flex items-center justify-center">
+                            <div onClick={handleEmail} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <MailIcon className="size-6" />
                             </div>
                         </div>
