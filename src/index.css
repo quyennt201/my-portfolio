@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@plugin "tailwindcss/line-clamp";
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;

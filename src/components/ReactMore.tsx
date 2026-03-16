@@ -8,7 +8,7 @@ interface ReadMoreProps {
 }
 
 export default function ReadMore({ children, maxLines = 3 }: ReadMoreProps) {
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true);
 
     return (
         <div>
@@ -20,7 +20,7 @@ export default function ReadMore({ children, maxLines = 3 }: ReadMoreProps) {
                 onClick={() => setExpanded(!expanded)}
                 className="text-blue-400 mt-1 cursor-pointer hover:underline"
             >
-                {expanded ? "Read less" : "Read more"}
+                {/* {expanded ? "Read less" : "Read more"} */}
             </button>
         </div>
     );
