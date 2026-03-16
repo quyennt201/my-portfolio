@@ -12,7 +12,7 @@ export default function ReadMore({ children, maxLines = 3 }: ReadMoreProps) {
 
     return (
         <div>
-            <div className={clsx("transition-all duration-300", expanded ? "" : `line-clamp-${maxLines}`)}>
+            <div className={clsx("w-full", expanded ? "" : `line-clamp-${maxLines}`)}>
                 {children}
             </div>
 

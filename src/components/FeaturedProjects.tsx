@@ -188,7 +188,7 @@ function FeaturedProjectCard({ project, index }: { project: Project, index: numb
                         ))}
                     </div>
                 </div>
-                <div className="flex items-end justify-between gap-4 mt-4">
+                <div className="flex items-end w-full justify-between gap-4 mt-4">
                     <button onClick={() => window.open(project.link, '_blank')} className="bg-gradient-primary px-4 py-2 hover:scale-105 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
                         View Project <ArrowRightIcon className="size-4" />
                     </button>
