@@ -24,7 +24,13 @@
     @apply bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-500;
   }
   .bg-gradient-primary {
-    @apply bg-linear-to-r from-primary to-secondary;
+    @apply bg-linear-to-r from-primary to-secondary hover:from-purple-500 hover:to-pink-500 transition-all duration-300;
+  }
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10
+  }
+  .glow-purple {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
   }
 }
 

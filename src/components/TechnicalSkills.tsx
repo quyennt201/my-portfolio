@@ -21,7 +21,7 @@ const TECHNICAL_SKILLS: Array<TechnicalSkill> = [
         },
         {
             name: 'NextJS',
-            color: '#000000',
+            color: '#fff',
             icon: 'nextjs',
         },
         {
@@ -77,11 +77,6 @@ const TECHNICAL_SKILLS: Array<TechnicalSkill> = [
             name: 'MySQL',
             color: '#4479A1',
             icon: 'mysql',
-        },
-        {
-            name: 'Redis',
-            color: '#DC382D',
-            icon: 'redis',
         },
         {
             name: 'Docker',
@@ -223,9 +218,10 @@ export const TechCard: React.FC<{ item: TechnicalSkill['skills'][number], index:
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            className="tech-card size-40 group relative flex flex-col items-center justify-center p-8 rounded-2xl aspect-square cursor-pointer overflow-hidden"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="size-40 group relative flex flex-col items-center justify-center p-8 rounded-2xl aspect-square cursor-pointer overflow-hidden"
         >
             {/* Background Glow on Hover */}
             <div

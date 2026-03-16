@@ -20,7 +20,7 @@ export default function HeroSection() {
                         Crafting modern, responsive, and user-friendly websites with passion and precision.
                     </p>
                     <div className="flex items-center gap-6 flex-wrap">
-                        <button className="bg-gradient-primary px-10 text-xl py-4 rounded-full text-white font-medium hover:from-purple-500 hover:to-pink-500 transition-all duration-300 flex items-center gap-2 cursor-pointer">
+                        <button className="bg-gradient-primary hover:scale-105 transition-all duration-300 px-10 text-lg py-4 rounded-full text-white font-medium flex items-center gap-2 cursor-pointer">
                             Down Resume <DownloadIcon className="size-6" />
                         </button>
                         <div className='flex items-center gap-6'>

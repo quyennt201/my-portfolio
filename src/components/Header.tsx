@@ -3,9 +3,9 @@ import { MenuIcon, XIcon } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 
-const SECTIONS = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const SECTIONS = [
   { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
@@ -13,11 +13,18 @@ const SECTIONS = [
 
 interface HeaderProps {
   activeSection: string;
-  setActiveSection: (section: string) => void;
 }
 
-export default function Header({ activeSection, setActiveSection }: HeaderProps) {
+export default function Header({ activeSection }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setIsOpen(false)
+    }
+  }
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-md border-b border-white/5">
@@ -25,16 +32,16 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-10">
           {SECTIONS.map((section) => (
-            <a
+            <button
               key={section.id}
-              onClick={() => setActiveSection(section.id)}
-              href={`#${section.id}`}
-              className={clsx("text-md font-medium text-white hover:text-purple-400 transition-colors",
-                activeSection === section.id && "text-purple-400"
+              onClick={() => scrollToSection(section.id)}
+              // href={`#${section.id}`}
+              className={clsx("text-md font-medium text-white cursor-pointer hover:text-purple-400 transition-colors",
+                activeSection === section.id && "text-purple-400!"
               )}
             >
               {section.label}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -57,7 +64,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
               {SECTIONS.map((section) => (
                 <button
                   key={section.id}
-                  onClick={() => setActiveSection(section.id)}
+                  onClick={() => scrollToSection(section.id)}
                   className={clsx("text-left text-lg cursor-pointer font-medium text-white hover:text-purple-400 transition-colors",
                     activeSection === section.id && "text-purple-400"
                   )}

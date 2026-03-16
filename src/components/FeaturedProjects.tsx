@@ -1,4 +1,5 @@
 import { ArrowRightIcon, GithubIcon } from "lucide-react";
+import { motion } from "motion/react";
 
 type Project = {
     title: string;
@@ -76,9 +77,9 @@ export default function FeaturedProjects() {
                 <h2 className="text-4xl font-bold text-center m-5">Featured Projects</h2>
                 <p className="text-center text-gray-400 text-xl">Check out some of my recent work</p>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-                    {PROJECT.map((project) => (
-                        <FeaturedProjectCard key={project.title} project={project} />
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                    {PROJECT.map((project, index) => (
+                        <FeaturedProjectCard key={project.title} project={project} index={index} />
                     ))}
                 </div>
 
@@ -87,14 +88,21 @@ export default function FeaturedProjects() {
     )
 }
 
-function FeaturedProjectCard({ project }: { project: Project }) {
+function FeaturedProjectCard({ project, index }: { project: Project, index: number }) {
     return (
-        <div className="bg-purple-400/10 rounded-lg shadow-md border border-white/10 hover:translate-y-[-10px] transition-all duration-300">
-            <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-t-lg" />
+        <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-white/5 backdrop-blur-xl rounded-4xl shadow-md p-4 border border-white/10 hover:translate-y-[-10px] transition-all duration-300"
+        >
+            <img src={project.image} alt={project.title} className="w-full aspect-16/10 object-cover rounded-3xl" />
             <div className="p-4 space-y-4">
                 <div className="space-y-2">
-                    <h3 className="text-lg font-bold">{project.title}</h3>
-                    <p className="text-gray-400 text-sm line-clamp-3">{project.description}</p>
+                    <h3 className="text-2xl font-bold">{project.title}</h3>
+                    <p className="text-gray-400 line-clamp-3">{project.description}</p>
                 </div>
                 <div className="flex items-center flex-wrap gap-2 mt-4">
                     {project.tech.map((tech) => (
@@ -102,17 +110,17 @@ function FeaturedProjectCard({ project }: { project: Project }) {
                     ))}
                 </div>
                 <div className="flex items-center justify-between gap-4 mt-4">
-                    <button className="bg-purple-600 px-4 py-2 rounded-lg text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
+                    <button className="bg-gradient-primary px-4 py-2 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
                         View Detail <ArrowRightIcon className="size-4" />
                     </button>
                     <div className="flex items-center gap-2">
-                        <button className="bg-white/5 px-4 py-2 rounded-lg text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
+                        <button className="bg-white/5 px-4 py-2 rounded-2xl text-white font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer">
                             <GithubIcon className="size-4" />
                             <span>GitHub</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </div >
+        </motion.div >
     );
 }   
