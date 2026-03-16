@@ -1,4 +1,4 @@
-import { DownloadIcon, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
+import { DownloadIcon, GithubIcon, MailIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import ReactIcon from './icons/ReactIcon';
 
@@ -8,18 +8,13 @@ const CONTENTS =
     subtitle: 'frontend developer',
     description: 'Crafting modern, responsive, and user-friendly websites with passion and precision.',
     resume: '/Nguyen-Thi-Quyen_Frontend-Developer.pdf',
-    github: 'https://github.com/quyennguyen123',
-    linkedin: 'https://www.linkedin.com/in/quyennguyen123',
-    email: 'quyennguyen123@gmail.com',
+    github: 'https://github.com/quyennt2001',
+    email: 'mailto:quyennt2001@gmail.com?subject=Contact from Portfolio',
 }
 
 export default function HeroSection() {
     const handleGithub = () => {
         window.open(CONTENTS.github, '_blank');
-    }
-
-    const handleLinkedin = () => {
-        window.open(CONTENTS.linkedin, '_blank');
     }
 
     const handleEmail = () => {
@@ -47,13 +42,10 @@ export default function HeroSection() {
                             Download Resume <DownloadIcon className="size-6" />
                         </a>
                         <div className='flex items-center gap-6'>
-                            <div onClick={handleGithub} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
+                            <div onClick={handleGithub} className="cursor-pointer hover:scale-110 transition-all duration-300 rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <GithubIcon className="size-6" />
                             </div>
-                            <div onClick={handleLinkedin} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
-                                <LinkedinIcon className="size-6" />
-                            </div>
-                            <div onClick={handleEmail} className="rounded-full p-3 bg-white/5 flex items-center justify-center">
+                            <div onClick={handleEmail} className="cursor-pointer hover:scale-110 transition-all duration-300 rounded-full p-3 bg-white/5 flex items-center justify-center">
                                 <MailIcon className="size-6" />
                             </div>
                         </div>
