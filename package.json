@@ -11,12 +11,14 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.2.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "motion": "^12.36.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "resend": "^6.9.3",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
