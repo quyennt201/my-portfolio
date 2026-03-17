@@ -1,6 +1,8 @@
 import { DownloadIcon, GithubIcon, MailIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import ReactIcon from './icons/ReactIcon';
+import TailwindIcon from './icons/TailwindIcon';
+import TypescriptIcon from './icons/TypescriptIcon';
 
 const CONTENTS =
 {
@@ -81,16 +83,18 @@ export default function HeroSection() {
                             <ReactIcon className='size-12 text-[#087ea4]' />
                         </motion.div>
                         <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }} className='absolute top-4 z-20 left-4 size-14 flex items-center justify-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-full'>
-                            <img src="https://cdn.creazilla.com/icons/3254431/tailwindcss-icon-icon-size_512.png" className='size-8 object-contain' alt="" />
+                            {/* <img src="https://cdn.creazilla.com/icons/3254431/tailwindcss-icon-icon-size_512.png" className='size-8 object-contain' alt="" /> */}
+                            <TailwindIcon className='size-8 text-white fill-sky-400' />
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, 15, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute top-[15%] -right-6 w-14 h-14 z-20 glass rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md bg-white/5 border border-white/10"
                         >
-                            <div className="w-9 h-9 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <TypescriptIcon className='size-6 text-white fill-blue-400' />
+                            {/* <div className="w-9 h-9 bg-orange-500/20 rounded-full flex items-center justify-center">
                                 <span className="text-orange-400 font-bold text-xs">HTML</span>
-                            </div>
+                            </div> */}
                         </motion.div>
                     </div>
                 </motion.div>

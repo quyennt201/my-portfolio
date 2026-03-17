@@ -227,11 +227,11 @@ export default function TechnicalSkills() {
                 <h2 className="text-4xl font-bold text-center m-5">Technical Skills</h2>
                 <p className="text-center text-gray-400 text-xl">My expertise across various technologies and tools</p>
                 <div className="flex items-center justify-center mt-5">
-                    <div className="rounded-xl flex items-center p-2 gap-4">
+                    <div className="rounded-xl flex flex-wrap justify-center items-center p-2 gap-4">
                         {TECHNICAL_SKILLS.map((skill) => (
                             <div key={skill.name}
                                 className={clsx("px-8 py-2 rounded-full text-lg cursor-pointer font-medium transition-all duration-300 border",
-                                    selectedTechnicalSkill === skill.name ? "bg-gradient-primary text-white border-transparent" : "bg-white/5 border-white/10"
+                                    selectedTechnicalSkill === skill.name ? "bg-gradient-primary text-white border-none" : "bg-white/5 border-white/10"
                                 )}
                                 onClick={() => setSelectedTechnicalSkill(skill.name)}
                             >
