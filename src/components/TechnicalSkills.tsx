@@ -230,7 +230,7 @@ export default function TechnicalSkills() {
                     <div className="rounded-xl flex flex-wrap justify-center items-center p-2 gap-4">
                         {TECHNICAL_SKILLS.map((skill) => (
                             <div key={skill.name}
-                                className={clsx("px-8 py-2 rounded-full text-lg cursor-pointer font-medium transition-all duration-300 border",
+                                className={clsx("px-8 py-2 rounded-full text-lg cursor-pointer font-medium border",
                                     selectedTechnicalSkill === skill.name ? "bg-gradient-primary text-white border-none" : "bg-white/5 border-white/10"
                                 )}
                                 onClick={() => setSelectedTechnicalSkill(skill.name)}

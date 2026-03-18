@@ -19,23 +19,22 @@ const PROJECT: Array<Project> = [
         title: "ConnectRoomFree – Room Rental Listing Platform",
         description: (
             <ReadMore>
-                ConnectRoomFree is a web platform that helps users search, browse, and manage room rental listings easily.
-                The application allows users to explore available rooms, filter by different criteria such as location and price, and view detailed information about each listing.
-
-                Users can also interact with the system by liking rooms, managing their personal listings, and viewing rooms they have saved. The platform is designed with a modern UI and optimized data fetching to provide a fast and smooth user experience.
+                Built a room rental platform connecting tenants and landlords, focusing primarily on backend development while implementing basic frontend features.
+                <p className="text-gray-400 font-bold"> Backend Features: </p>
                 <ul className="list-disc list-inside">
-                    <p className="text-gray-400 font-bold">
-                        Key features include:
-                    </p>
-                    <li>Browse and search room listings</li>
-                    <li>Filter rooms by district, price, and keywords</li>
-                    <li>Like and save favorite rooms</li>
-                    <li>View detailed information about each room</li>
-                    <li>Responsive interface with smooth animations</li>
+                    <li>Implemented authentication and role-based access control (Admin, User)</li>
+                    <li>Designed and managed relational database schema using PostgreSQL</li>
+                    <li>Developed RESTful APIs for CRUD operations on rental listings</li>
+                </ul>
+                <p className="text-gray-400 font-bold"> Frontend Features: </p>
+                <ul className="list-disc list-inside">
+                    <li>Built UI for displaying rental listings</li>
+                    <li>Implemented filtering and search functionality</li>
+                    <li>Integrated APIs for data fetching and rendering</li>
                 </ul>
             </ReadMore>
         ),
-        tech: ["ReactJS", "TailwindCSS", "TypeScript", "TanStack React Query", "NestJS", "PostgreSQL", "Docker"],
+        tech: ["NestJS", "ReactJS", "TypeScript", "PostgreSQL", "Docker"],
         image: "/connect-room.jpg",
         link: "https://connect-room-free.homes",
         github: "https://github.com/quyennt201/fe-connect-room",
@@ -66,31 +65,32 @@ const PROJECT: Array<Project> = [
         date: "2025",
     },
     {
-        title: "English Center Management System",
+        title: "Exam Management System (Multi-role Platform)",
         description: (
             <ReadMore>
-                Project Overview: Developed a web-based management system for an English center, consisting of two separate admin
-                platforms:
+                Project Overview: Developed frontend features for a role-based exam management system with User, Admin, and Super Admin roles, supporting authentication, authorization, and dynamic UI rendering based on user permissions.
                 <div>
                     <ul className="list-disc list-inside">
                         <p className="text-gray-400 font-bold">
-                            Oauth
+                            Authentication
                         </p>
-                        <li>Login with Google</li>
+                        <li>Implemented authentication (Google OAuth) with protected routes</li>
+                        <li>
+                            Built role-based access control and dynamic UI rendering
+                        </li>
                     </ul>
                     <ul className="list-disc list-inside">
                         <p className="text-gray-400 font-bold">
-                            Company Admin System
+                            Admin Features:
                         </p>
-                        <li>User and role management</li>
-                        <li>Department management</li>
-                        <li> Create and manage exam events</li>
-                        <li> View candidate lists</li>
-                        <li> Score tracking and reporting</li>
+                        <li>Built user management interfaces (view and update user data)</li>
+                        <li>Developed exam creation and management workflows</li>
+                        <li>Implemented candidate tracking and participation views</li>
+                        <li>Built dashboards for statistics and score reporting</li>
                     </ul>
 
                     <ul className="list-disc list-inside">
-                        <p className="text-gray-400 font-bold">Brit Admin System (Exam Management)</p>
+                        <p className="text-gray-400 font-bold">Super Admin Features:</p>
                         <li> Exam creation and management</li>
                         <li> Question and answer input</li>
                         <li> Maintain and update exam content</li>
@@ -99,7 +99,7 @@ const PROJECT: Array<Project> = [
                 </div>
             </ReadMore>
         ),
-        tech: ["NextJS", "Tailwind", "TypeScript", "React Hook Form", "Zod", "React Query"],
+        tech: ["NextJS", "Tailwind", "TypeScript", "React Hook Form", "Zod", "Tanstack Query"],
         image: "https://png.pngtree.com/background/20210714/original/pngtree-abstract-technology-background-technical-electric-picture-image_1252603.jpg",
         link: "https://toeic.brit.edu.vn/",
         date: "2025",
