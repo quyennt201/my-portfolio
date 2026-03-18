@@ -4,17 +4,38 @@ import { useRef, useState } from "react";
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [error, setError] = useState(false);
+    const [error, setError] = useState('');
 
     const form = useRef<HTMLFormElement>(null);
 
     const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        setLoading(true);
         setSuccess(false);
-        setError(false);
+        setError('');
 
+        if (!form.current) return;
+
+        const formData = new FormData(form.current);
+
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+
+        if (!name) {
+            setError('Name is required');
+            return;
+        }
+        if (!email) {
+            setError('Email is required');
+            return;
+        }
+        if (!message) {
+            setError('Message is required');
+            return;
+        }
+
+        setLoading(true);
         await emailjs.sendForm(
             import.meta.env.VITE_EMAILJS_SERVICE_ID,
             import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -24,7 +45,7 @@ export default function ContactForm() {
             setSuccess(true);
             form.current?.reset();
         }).catch((err) => {
-            setError(true)
+            setError('Failed to send message. Please try again.')
             console.error(err)
         }).finally(() => {
             setLoading(false)
@@ -69,14 +90,14 @@ export default function ContactForm() {
                             className="w-full bg-white/5 border border-white/10 px-8 py-5 rounded-2xl focus:outline-none focus:border-purple-500 transition-all text-lg"
                         />
                     </div>
-                    <button type="submit" className="w-full cursor-pointer bg-gradient-primary text-white px-8 py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-all duration-300 glow-purple">
+                    <button disabled={loading} type="submit" className="w-full disabled:cursor-progress disabled:opacity-75 cursor-pointer bg-gradient-primary text-white px-8 py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-all duration-300 glow-purple">
                         {loading ? 'Sending...' : 'Send Message'}
                     </button>
                     {success && (
                         <p className="text-green-500 text-center">Message sent successfully!</p>
                     )}
                     {error && (
-                        <p className="text-red-500 text-center">Failed to send message. Please try again.</p>
+                        <p className="text-red-500 text-center">{error}</p>
                     )}
                 </form>
             </div>
